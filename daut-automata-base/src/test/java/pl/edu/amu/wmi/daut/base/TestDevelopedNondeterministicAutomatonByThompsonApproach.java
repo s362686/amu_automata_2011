@@ -27,7 +27,8 @@ public class TestDevelopedNondeterministicAutomatonByThompsonApproach extends Te
         spec.markAsInitial(q0);
         spec.markAsFinal(q1);
 
-        final DevelopedNondeterministicAutomatonByThompsonApproach automaton = new DevelopedNondeterministicAutomatonByThompsonApproach(
+        final DevelopedNondeterministicAutomatonByThompsonApproach automaton
+            = new DevelopedNondeterministicAutomatonByThompsonApproach(
                 spec);
 
         assertTrue(automaton.accepts("a"));
@@ -60,7 +61,8 @@ public class TestDevelopedNondeterministicAutomatonByThompsonApproach extends Te
         spec.markAsInitial(q0);
         spec.markAsFinal(q2);
 
-        final DevelopedNondeterministicAutomatonByThompsonApproach automaton = new DevelopedNondeterministicAutomatonByThompsonApproach(
+        final DevelopedNondeterministicAutomatonByThompsonApproach automaton
+            = new DevelopedNondeterministicAutomatonByThompsonApproach(
                 spec);
 
         assertTrue(automaton.accepts(""));
@@ -73,8 +75,8 @@ public class TestDevelopedNondeterministicAutomatonByThompsonApproach extends Te
     public final void testEmptyAutomaton() {
         final AutomatonSpecification spec = new NaiveAutomatonSpecification();
 
-        final DevelopedNondeterministicAutomatonByThompsonApproach automaton = new DevelopedNondeterministicAutomatonByThompsonApproach(
-                spec);
+        final DevelopedNondeterministicAutomatonByThompsonApproach automaton 
+            = new DevelopedNondeterministicAutomatonByThompsonApproach(spec);
 
         assertFalse(automaton.accepts("aaa"));
         assertFalse(automaton.accepts("bbb"));
@@ -84,7 +86,7 @@ public class TestDevelopedNondeterministicAutomatonByThompsonApproach extends Te
     /**
      * Test czwarty (Pierwsze trzy epsilon przejscia).
      */
-    public final void testOnlyEpsilonTransitionLabelFromInitialState() {
+    public final void testOnlyEpsilonTransitionLabelFromInitialState(){
         final AutomatonSpecification spec = new NaiveAutomatonSpecification();
 
         State q0 = spec.addState();
@@ -116,7 +118,8 @@ public class TestDevelopedNondeterministicAutomatonByThompsonApproach extends Te
         spec.markAsInitial(q0);
         spec.markAsFinal(q6);
 
-        final DevelopedNondeterministicAutomatonByThompsonApproach automaton = new DevelopedNondeterministicAutomatonByThompsonApproach(
+        final DevelopedNondeterministicAutomatonByThompsonApproach automaton
+            = new DevelopedNondeterministicAutomatonByThompsonApproach(
                 spec);
 
         assertTrue(automaton.accepts("aa"));
@@ -138,7 +141,8 @@ public class TestDevelopedNondeterministicAutomatonByThompsonApproach extends Te
         spec.markAsInitial(q0);
         spec.markAsFinal(q0);
 
-        final DevelopedNondeterministicAutomatonByThompsonApproach automaton = new DevelopedNondeterministicAutomatonByThompsonApproach(
+        final DevelopedNondeterministicAutomatonByThompsonApproach automaton
+            = new DevelopedNondeterministicAutomatonByThompsonApproach(
                 spec);
 
         assertTrue(automaton.accepts(""));
@@ -166,7 +170,8 @@ public class TestDevelopedNondeterministicAutomatonByThompsonApproach extends Te
         spec.markAsInitial(q0);
         spec.markAsFinal(q3);
 
-        final DevelopedNondeterministicAutomatonByThompsonApproach automaton = new DevelopedNondeterministicAutomatonByThompsonApproach(
+        final DevelopedNondeterministicAutomatonByThompsonApproach automaton
+            = new DevelopedNondeterministicAutomatonByThompsonApproach(
                 spec);
 
         assertTrue(automaton.accepts("a"));
