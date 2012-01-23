@@ -75,7 +75,7 @@ public class TestDevelopedNondeterministicAutomatonByThompsonApproach extends Te
     public final void testEmptyAutomaton() {
         final AutomatonSpecification spec = new NaiveAutomatonSpecification();
 
-        final DevelopedNondeterministicAutomatonByThompsonApproach automaton 
+        final DevelopedNondeterministicAutomatonByThompsonApproach automaton
             = new DevelopedNondeterministicAutomatonByThompsonApproach(spec);
 
         assertFalse(automaton.accepts("aaa"));
@@ -86,7 +86,7 @@ public class TestDevelopedNondeterministicAutomatonByThompsonApproach extends Te
     /**
      * Test czwarty (Pierwsze trzy epsilon przejscia).
      */
-    public final void testOnlyEpsilonTransitionLabelFromInitialState(){
+    public final void testOnlyEpsilonTransitionLabelFromInitialState() {
         final AutomatonSpecification spec = new NaiveAutomatonSpecification();
 
         State q0 = spec.addState();
